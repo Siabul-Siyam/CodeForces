@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main(){
+
+
+unsigned long long int houses, tasks;
+unsigned long long int count = 0;
+
+	unsigned long long int temp = 1;
+cin>> houses >> tasks;
+
+    while (tasks>0 ) {
+	unsigned long long int input;
+	cin>> input;
+
+	if (input> temp) {
+		count += input - temp;
+	}
+ else if (input<temp) {
+count +=  houses-temp+input;
+ 
+ }
+	temp = input;
+    tasks--;
+	}
+
+cout<<count<<endl;
+
+return 0;
+}
